@@ -8,15 +8,15 @@ export default {
 		return {};
 	},
 	mounted() {
-		var curTime = new Date();
-		if (IsNotEmpty(window.localStorage.TokenExpire)) {
-			var expire = new Date(Date.parse(window.localStorage.TokenExpire));
-			if (curTime >= expire) {
-				this.$router.push('/login');
-			}
-		} else {
-			this.$router.push('/login');
-		}
+		// var curTime = new Date();
+		// if (IsNotEmpty(window.localStorage.TokenExpire)) {
+		// 	var expire = new Date(Date.parse(window.localStorage.TokenExpire));
+		// 	if (curTime >= expire) {
+		// 		this.$router.push('/login');
+		// 	}
+		// } else {
+		// 	this.$router.push('/login');
+		// }
 	}
 };
 </script>

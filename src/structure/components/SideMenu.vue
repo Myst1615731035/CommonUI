@@ -2,14 +2,14 @@
 	<div>
 		<el-sub-menu v-if="nav.children && nav.children.length > 0" :index="nav.name">
 			<template #title>
-				<!-- <i v-if="!!nav.icon" class="fa" :class="nav.icon"></i> -->
+				<i v-if="!!nav.icon" class="fa" :class="nav.icon"></i>
 				<span>{{ nav.name }}</span>
 			</template>
 			<sidemenu v-for="(item, index) in nav.children" :nav="item" :key="index"></sidemenu>
 		</el-sub-menu>
 		<el-menu-item v-else :index="nav.name">
 			<template #title>
-				<!-- <i v-if="nav.icon" class="fa" :class="nav.icon"></i> -->
+				<i v-if="nav.icon" class="fa" :class="nav.icon"></i>
 				<span>{{ nav.name }}</span>
 			</template>
 		</el-menu-item>
@@ -28,8 +28,8 @@ export default {
 
 <style>
 i.fa {
-	width: 1rem;
-	height: 1rem;
+	width: 0.875rem;
+	height: 0.875rem;
 	margin-right: 0.25rem;
 }
 </style>

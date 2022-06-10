@@ -1,6 +1,9 @@
 <template>
 	<el-container>
-		<el-header class="theme top-header">Header</el-header>
+		<el-header class="theme top-header">
+			<i class="fa fa-bars"></i>
+			Header
+			</el-header>
 		<el-main class="tabNav">
 			<ul>
 				<li v-for="tag in tags" :key="tag.name" class="tag">
@@ -35,6 +38,8 @@ export default {
 }
 .top-header {
 	height: 3.125rem;
+	line-height: 3.125rem;
+	text-align: left;
 }
 .tabNav {
 	height: 1.875rem;
