@@ -31,4 +31,41 @@ npm run build
 *运行与打包命令，对应于package.json文件内的“scripts”模块配置*
 
 ## 项目结构
-|-
+**以下本项目的项目结构，用于说明目录下每个模块的作用，同时对项目的架构进行图示解析**  
+#### 概要说明
+- 本项目的核心模块主要分为两部分：
+   - public: 静态资源文件，例如图片，图标等；CSS文件，例如font-awesome等, 全局的通用js方法：例如对象判空，日期计算，日期格式化等
+   - src：系统框架模块与业务逻辑模块
+```
+public
+├─ static             静态资源模块
+│  ├─ css               CSS
+│  ├─ js                 全局通用的js
+│  └─ fonts              图标
+src
+├─ plugins            第三方扩展插件
+│  └─ vxe-table         Vxe-Table
+│
+├─ structure          界面核心结构
+│  ├─ components        主界面结构设计
+│  └─ vue-plugins       Vue生态扩展
+│  │  ├─ router           vue-router 路由配置
+│  │  └─ store            vuex 状态仓库配置 （工厂模式）
+│  │  │  ├─ modules         “小存储室”,分模块的小仓库
+│  │  │  └─ store.js        仓库集成，仓库出口
+│
+├─ utils              工具模块
+│  └─ http              axios请求接口工具  
+│
+├─ views              视图模块
+│  ├─ System            框架通用模块视图
+│  │  ├─ Base
+│  │  ├─ Home
+│  │  ├─ Role
+│  │  └─ User
+│  │
+│  └─ Pages           系统业务视图，用于开发系统业务，同时作为动态路由路径扩展
+│ ... 
+│ ... 待扩展
+│ ... 
+```
